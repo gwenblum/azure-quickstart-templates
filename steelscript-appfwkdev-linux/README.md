@@ -28,7 +28,9 @@ Steelscript Application Framework reference for developpers: https://support.riv
 
 ### Open the URL in a browser
 
-Get the URL in the Deployment outputs. For example: http://ssappfwkdev-bcncuqdggmvjc.koreacentral.cloudapp.azure.com:8000
+Get the URL in the Deployment outputs. For example: http://ssappfwkdev-e6dmmedjht2yy.westeurope.cloudapp.azure.com:8000
+
+![](images/appfwk-browser.png)
 
 ### Connect to the VM using SSH
 
