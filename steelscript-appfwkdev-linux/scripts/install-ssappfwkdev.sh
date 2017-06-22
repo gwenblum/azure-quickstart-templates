@@ -3,7 +3,7 @@
 #.SYNOPSIS
 #    Steelscript Application Framework setup for developper (ssappfwkdev)
 #.DESCRIPTION
-#    @Version: 2.0.0.9
+#    @Version: 2.0.0.10
 #    @Author: Gwen Blum
 #    @Date: 20160520 
 #    @Changelog:
@@ -190,10 +190,16 @@ cd $projectpath ; sudo python "/appfwk_project/manage.py" runserver 0.0.0.0:$app
 sleep 15
 
 ### Final check
-curl http://127.0.0.1:8000
+curl http://127.0.0.1:5000
 if [ $? -ne 0 ]; then
-echo "$(date +%H:%M:%S) ERROR:  appfwk not started" 1>&2
+echo "$(date +%H:%M:%S) ERROR:  progressd not running" 1>&2
 exit 2
+fi
+
+curl http://127.0.0.1:$appfwkServerPort
+if [ $? -ne 0 ]; then
+echo "$(date +%H:%M:%S) ERROR:  appfwk not running" 1>&2
+exit 3
 fi
 
 exit 0
