@@ -67,8 +67,7 @@
         "virtualMachineName": "[concat(variables('appPrefix'),'-vm')]",
         "adminUsername": "[concat(variables('appPrefix'),'-admin')]",
         "vhdStorageType": "Standard_LRS",
-        "diagnosticsVhdStorageAccountName": "[concat('diag',uniqueString(resourceGroup().id))]",
-        "diagnosticsStorageAccountName": "[variables('diagnosticsVhdStorageAccountName')]",
+        "diagnosticsStorageAccountName": "[concat('diag',uniqueString(resourceGroup().id))]",        
         "extensionName": "install-ssappfwkdev-script"
     },
     "resources": [
